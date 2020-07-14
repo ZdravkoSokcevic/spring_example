@@ -28,7 +28,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>jstl</artifactId>
+		    <version>1.2</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -51,6 +55,17 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+	    <dependency>
+	        <groupId>org.apache.tomcat.embed</groupId>
+	        <artifactId>tomcat-embed-jasper</artifactId>
+	        <scope>provided</scope>
+	    </dependency>
+
+		<dependency>
+		    <groupId>org.codehaus.jackson</groupId>
+		    <artifactId>jackson-mapper-asl</artifactId>
+		    <version>1.9.13</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -62,6 +77,18 @@
 			</plugin>
 
 		</plugins>
+		<resources>
+		    <resource>
+		        <directory>src/main/resources</directory>
+		    </resource>
+		    <resource>
+		        <directory>static</directory>
+		        <targetPath>static</targetPath>
+		    </resource>
+		</resources>
 	</build>
+
+
+
 
 </project>

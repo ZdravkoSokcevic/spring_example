@@ -14,12 +14,12 @@ public class User
 	@Id
 	@Column(name="user_id")
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Long user_id;
-	private String username;
-	private String first_name;
-	private String last_name;
-	private String Gender;
-	private Integer status;
+	public Long user_id;
+	public String username;
+	public String first_name;
+	public String last_name;
+	public String Gender;
+	public Integer status;
 
 	private String password;
 
